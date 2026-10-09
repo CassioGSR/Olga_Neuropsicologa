@@ -39,7 +39,7 @@ import { useState } from "react";
 import heroPhoto from "@/assets/olga-hero.jpeg.asset.json";
 import portraitPhoto from "@/assets/olga-portrait.jpeg.asset.json";
 import officePhoto from "@/assets/olga-office.jpeg.asset.json";
-
+import { whatsappLink, MSG_AVALIACAO } from "@/lib/whatsapp";
 // ═══ [S00] METADADOS / SEO ═══ título, descrição e Open Graph (aba do navegador e Google)
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -427,9 +427,6 @@ function Index() {
                   Aplicada (ABA) e articulação com fonoaudiólogos, terapeutas ocupacionais, médicos e
                   escolas.
                 </p>
-                <a className="text-link" data-id="servicos-card-aba-link" href="#contato">
-                  Saiba mais <span aria-hidden="true">→</span>
-                </a>
               </article>
               {/* [S06-3] Card pequeno: Orientação para famílias e escolas */}
               <article className="service-card mini" data-id="servicos-card-orientacao">
@@ -669,12 +666,15 @@ function Index() {
               </a>
               {/* [S10-B2] WhatsApp — ⚠️ TODO: substituir o texto pelo número oficial
                   e transformar este <div> em <a href="https://wa.me/55DDDNUMERO"> */}
-              <a href="https://wa.me/5594984304844">
+              <a href={whatsappLink(MSG_AVALIACAO)}
+                  target="_blank"
+                  rel="noopener noreferrer">
                 <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 -20 24 50" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
-	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	<path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-	<path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-</svg></span>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                </svg>
+                </span>
                 <div>
                   <small>WhatsApp</small>
                   <strong>94 98430-4844</strong>

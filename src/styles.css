@@ -355,16 +355,19 @@
 .micro-note {
   font-size: 12px;
   color: var(--muted-foreground);
-  margin: 0px 10 40px;
+  margin: 0 10px 40px;
 }
 .hero-art {
   position: relative;
+  isolation: isolate;
   min-height: 600px;
   display: grid;
   place-items: center;
 }
 .blob {
   position: absolute;
+  z-index: 0;
+  pointer-events: none;
   border-radius: 50% 48% 52% 45%;
 }
 .blob-a {
@@ -385,6 +388,7 @@
 }
 .hero-photo {
   position: relative;
+  z-index: 1;
   width: min(100%, 420px);
   aspect-ratio: 3 / 4;
   border-radius: 220px 220px 26px 26px;
@@ -400,6 +404,7 @@
 }
 .art-card {
   position: absolute;
+  z-index: 2;
   left: 0;
   bottom: 6%;
   background: var(--card);
@@ -900,24 +905,18 @@
 }
 .service-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 0.8fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+  align-items: stretch; /* garante a mesma altura (já é o padrão) */
 }
 .service-card {
   padding: 34px;
   border: 1px solid var(--border);
   border-radius: 22px;
-  background: var(--paper);
+  background: var(--cream);
   min-height: 310px;
 }
-.service-card.featured {
-  background: var(--cream);
-  border-color: transparent;
-}
-.service-card.mini {
-  min-height: auto;
-  align-self: end;
-}
+
 .icon,
 .mini-icon {
   width: 52px;
@@ -930,10 +929,10 @@
   margin-bottom: 18px;
 }
 .mini-icon {
-  background: var(--gold);
-  color: var(--navy);
-  width: 42px;
-  height: 42px;
+  background: var(--navy); /* ou mantenha var(--gold) se preferir */
+  color: var(--gold);
+  width: 52px;
+  height: 52px;
 }
 .card-kicker {
   color: var(--gold-deep);
@@ -1343,23 +1342,28 @@
   .hero-grid {
     grid-template-columns: 1fr;
     min-height: auto;
+    gap: 32px;
     padding: 60px 0 20px;
   }
   .hero-art {
-    min-height: auto;
+    min-height: 480px;
     padding-bottom: 40px;
   }
   .blob-a {
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
   }
   .blob-b {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
+    left: -4%;
+    bottom: -2%;
   }
   .art-card {
-    position: static;
-    margin-top: -30px;
+    left: 12px;
+    right: 12px;
+    max-width: none;
+    bottom: 4%;
   }
   
   .section {
