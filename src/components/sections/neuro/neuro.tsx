@@ -1,8 +1,8 @@
-import officePhoto from "@/assets/olga-office.jpeg.asset.json";
+import officePhoto from "@/assets/olga-office.webp";
 
 export function Neuro() {
   return (
-    <section className="neuro-section" data-section="avaliacao">
+    <section className="neuro-section" id="avaliacao" data-section="avaliacao">
       <div className="container neuro-grid">
         {/* [S07-A] Introdução + foto do consultório */}
         <div className="neuro-intro" data-id="avaliacao-intro">
@@ -14,14 +14,17 @@ export function Neuro() {
           </p>
           <div className="neuro-photo" data-id="avaliacao-foto">
             <img
-              src={officePhoto.url}
+              src={officePhoto}
               alt="Olga Rodrigues no consultório com instrumentos de avaliação neuropsicológica"
+              width={1200}
+              height={960}
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
 
-        {/* [S07-B] Lista de 3 pontos numerados */}
+        {/* [S07-B] Lista de 3 pontos */}
         <div className="neuro-points" data-id="avaliacao-pontos">
           <div data-id="avaliacao-ponto-01">
             <span>
@@ -36,6 +39,7 @@ export function Neuro() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="icon icon-tabler icons-tabler-outline icon-tabler-brain"
+                aria-hidden="true"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" />
@@ -65,6 +69,7 @@ export function Neuro() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="icon icon-tabler icons-tabler-outline icon-tabler-puzzle"
+                aria-hidden="true"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
@@ -92,6 +97,7 @@ export function Neuro() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="icon icon-tabler icons-tabler-outline icon-tabler-replace-user"
+                aria-hidden="true"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M21 11v-3c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-6m0 0l3 3m-3 -3l3 -3" />

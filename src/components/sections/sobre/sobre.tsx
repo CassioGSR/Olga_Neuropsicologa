@@ -1,4 +1,4 @@
-import portraitPhoto from "@/assets/olga-portrait.jpeg.asset.json";
+import portraitPhoto from "@/assets/olga-portrait.webp";
 
 export function Sobre() {
   return (
@@ -8,9 +8,12 @@ export function Sobre() {
         <div data-id="sobre-media">
           <figure className="portrait-frame" data-id="sobre-retrato" style={{ margin: 0 }}>
             <img
-              src={portraitPhoto.url}
+              src={portraitPhoto}
               alt="Retrato profissional de Olga Rodrigues, psicóloga e neuropsicóloga clínica"
+              width={960}
+              height={1200}
               loading="lazy"
+              decoding="async"
             />
             <figcaption>Olga Rodrigues · CRP 10/08409</figcaption>
           </figure>

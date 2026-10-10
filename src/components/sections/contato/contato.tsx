@@ -98,7 +98,7 @@ export function Contato() {
             </span>
             <div>
               <small>Endereço</small>
-              <strong>Atendimento presencial</strong>
+              <strong>Atualizaremos em breve</strong>
             </div>
           </div>
         </div>
