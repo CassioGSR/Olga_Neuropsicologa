@@ -1,0 +1,45 @@
+/* ═══════════════ [BTN] BOTÕES GLOBAIS ═══════════════ */
+.btn {
+  display: inline-flex;
+  width: max-content;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 19px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 13px;
+  border: 1px solid transparent;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px oklch(0.19 0.055 265 / 0.16);
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--paper);
+}
+.btn-navy {
+  background: var(--navy);
+  color: var(--primary-foreground);
+}
+.text-link {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--blue);
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  font-weight: 800;
+  color: var(--gold-deep);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.eyebrow.light {
+  color: var(--gold);
+}
