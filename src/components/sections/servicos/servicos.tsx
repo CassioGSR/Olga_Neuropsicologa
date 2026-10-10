@@ -4,7 +4,7 @@ export function Servicos() {
       <div className="container">
         <div className="section-heading centered" data-id="servicos-heading">
           <p className="eyebrow" data-id="servicos-eyebrow">SERVIÇOS E ESPECIALIDADES</p>
-          <h2 data-id="servicos-title">Como posso ajudar seu filho</h2>
+          <h2 data-id="servicos-title">Como posso ajudar</h2>
           <p data-id="servicos-subtitle">
             Um atendimento que combina investigação clínica, conhecimento técnico e atuação
             integrada.

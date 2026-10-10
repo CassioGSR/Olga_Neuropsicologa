@@ -13,7 +13,7 @@ export function Etapas() {
           </p>
         </div>
 
-        {/* [S09-A] Linha do tempo (lista ordenada de 4 etapas) */}
+        {/* [S09-A] Linha do tempo */}
         <ol className="timeline" data-id="etapas-timeline">
           <li data-id="etapas-passo-01-anamnese">
             <span className="step-number">01</span>
@@ -32,7 +32,7 @@ export function Etapas() {
               <h3>Sessões de Avaliação</h3>
               <small>Testagem</small>
               <p>
-                Aplicação de testes neuropsicológicos padrão-ouro e observação clínica
+                Aplicação de instrumentos neuropsicológicos padronizados e observação clínica
                 estruturada em ambiente acolhedor.
               </p>
             </div>

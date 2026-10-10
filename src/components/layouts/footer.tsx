@@ -1,3 +1,6 @@
+import { SITE_CITY } from "@/data/site";
+import { whatsappLink, MSG_GERAL } from "@/lib/whatsapp";
+
 export function Footer() {
   return (
     <footer className="site-footer" data-section="footer">
@@ -14,18 +17,22 @@ export function Footer() {
         <nav className="footer-col" aria-label="Navegação do rodapé" data-id="footer-nav">
           <h3>Navegação</h3>
           <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Atendimento</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="/#inicio">Início</a></li>
+            <li><a href="/#sobre">Sobre</a></li>
+            <li><a href="/#servicos">Atendimento</a></li>
+            <li><a href="/#contato">Contato</a></li>
           </ul>
         </nav>
 
         <div className="footer-col" data-id="footer-contato">
           <h3>Contato</h3>
           <ul>
-            <li><a href="https://wa.me/5594984304844">WhatsApp</a></li>
-            <li>Fortaleza, CE</li>
+            <li>
+              <a href={whatsappLink(MSG_GERAL)} target="_blank" rel="noopener noreferrer">
+                WhatsApp
+              </a>
+            </li>
+            <li>{SITE_CITY}</li>
           </ul>
         </div>
 
@@ -47,7 +54,7 @@ export function Footer() {
             data-id="footer-credit"
             href="https://silverhand.com.br"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             Desenvolvido por <strong>Silverhand</strong>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

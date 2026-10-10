@@ -1,4 +1,5 @@
-import heroPhoto from "@/assets/olga-hero.jpeg.asset.json";
+import heroPhoto from "@/assets/olga-hero.webp";
+import { whatsappLink, MSG_AVALIACAO } from "@/lib/whatsapp";
 
 export function Hero() {
   return (
@@ -19,13 +20,18 @@ export function Hero() {
             <em>crianças e adolescentes.</em>
           </h1>
           <p className="lead" data-id="hero-lead">
-            Avaliação Neuropsicológica com testes padrão-ouro para crianças e adolescentes dos 2
-            anos e 6 meses aos 16 anos, baseada em evidências para apoiar cada etapa do
-            crescimento do seu filho.
+            Avaliação Neuropsicológica com instrumentos padronizados e validados para crianças e
+            adolescentes dos 2 anos e 6 meses aos 16 anos, baseada em evidências para apoiar cada
+            etapa do crescimento do seu filho.
           </p>
           <div className="hero-actions" data-id="hero-actions">
-            {/* TODO: trocar href pelo link do WhatsApp (wa.me) */}
-            <a className="btn btn-navy" data-id="hero-cta-primary" href="#contato">
+            <a
+              className="btn btn-navy"
+              data-id="hero-cta-primary"
+              href={whatsappLink(MSG_AVALIACAO)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Falar no WhatsApp <span aria-hidden="true">↗</span>
             </a>
             <a className="text-link" data-id="hero-cta-secondary" href="#servicos">
@@ -37,15 +43,19 @@ export function Hero() {
           </p>
         </div>
 
-        {/* [S04-B] Coluna da imagem (foto + formas decorativas + cartão flutuante) */}
+        {/* [S04-B] Coluna da imagem */}
         <div className="hero-art" data-id="hero-art">
           <div className="blob blob-a" data-id="hero-blob-a" aria-hidden="true" />
           <div className="blob blob-b" data-id="hero-blob-b" aria-hidden="true" />
           <div className="hero-photo" data-id="hero-photo">
             <img
-              src={heroPhoto.url}
+              src={heroPhoto}
               alt="Olga Rodrigues, psicóloga e neuropsicóloga, em traje social azul claro"
+              width={840}
+              height={1120}
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
           <div className="art-card" data-id="hero-art-card">
@@ -56,11 +66,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* [S04-C] Faixa de informações-chave (4 cartões com ícone).
-          Para adicionar/editar um cartão, copie um bloco [S04-C-n] inteiro.
-          Obs.: o CSS espera 4 itens (grid de 4 colunas) — ver [S04] em styles.css */}
+      {/* [S04-C] Faixa de informações-chave (4 cartões com ícone) */}
       <div className="hero-bottom" data-id="hero-stats">
-        {/* [S04-C-1] Idade inicial */}
         <div className="hero-stat" data-id="hero-stat-idade-inicial">
           <div className="hero-stat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -75,7 +82,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* [S04-C-2] Idade final */}
         <div className="hero-stat" data-id="hero-stat-idade-final">
           <div className="hero-stat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -89,7 +95,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* [S04-C-3] Registro profissional (CRP) */}
         <div className="hero-stat" data-id="hero-stat-crp">
           <div className="hero-stat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -103,7 +108,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* [S04-C-4] Baseada em evidências */}
         <div className="hero-stat" data-id="hero-stat-evidencias">
           <div className="hero-stat-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
