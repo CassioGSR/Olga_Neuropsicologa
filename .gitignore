@@ -30,3 +30,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#Variáveis de ambiente e segredos
+
+.env
+.env.*
+!.env.example
+!.env.sample
+
+#Arquivos locais
+
+*.local

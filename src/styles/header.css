@@ -1,0 +1,114 @@
+/* ═══════════════ [S03] CABEÇALHO / MENU ═══════════════ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in oklab, var(--navy) 94%, transparent);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+}
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.6;
+}
+
+/*.footer-main {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.2fr 1.2fr;
+  gap: 48px;
+  padding-bottom: 48px;
+} */
+
+.nav-wrap {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+}
+.brand-mark {
+  width: 75px;
+  height: 75px;
+  min-width: 75px;
+  border-radius: 75%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border: 2px solid var(--gold);
+
+  background: var(--navy);
+
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: fill;
+  object-position: center;
+
+  border-radius: 50%;
+}
+
+.brand strong {
+  display: block;
+  font-family: var(--font-display);
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.15;
+}
+.brand small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.11em;
+  line-height: 1.352;
+  color: var(--paper);
+}
+.desktop-nav {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+.desktop-nav a:hover,
+.mobile-nav a:hover {
+  color: var(--gold);
+}
+
+.menu-button {
+  display: none;
+  border: 0;
+  background: none;
+  padding: 8px;
+  cursor: pointer;
+}
+.menu-button span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--navy);
+  margin: 5px;
+}
+.mobile-nav {
+  padding: 12px 0 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-weight: 700;
+}
